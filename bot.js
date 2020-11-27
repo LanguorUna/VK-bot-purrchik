@@ -1,1 +1,1 @@
-export const TOKEN = 'Тут ваш токен'
+module.exports.TOKEN = 'Тут ваш токен'
