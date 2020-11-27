@@ -1,0 +1,1 @@
+export const TOKEN = 'Тут ваш токен'
