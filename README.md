@@ -1,6 +1,7 @@
 # Пуррчик (Purrchik)
 
 ВК бот для записи на маникюр в салоне "ForPoor"
+![](/VK-bot-purrchik/Bot.png)
 
 ## Установка
 1. [Установить node.js версии 14.15.2 или выше](https://nodejs.org/en/ "node.js")
