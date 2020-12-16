@@ -212,7 +212,13 @@ async function getNextDate(date, isStart = false) {
 async function notifyUsers(beforeDays){
 
   const now = new Date();
-  let users = await db.schedule.find({ status: false, date: { $lte: new Date(now.getFullYear(), now.getMonth(), now.getDate() + beforeDays, now.getHours(), now.getMinutes())} })
+  let users = await db.schedule.find({ 
+    status: false, 
+    date: { 
+      $lte: new Date(now.getFullYear(), now.getMonth(), now.getDate() + beforeDays, now.getHours(), now.getMinutes()),
+      $gte : new Date(),
+    } 
+  })
 
   if(users.length > 0){
     let vkUser;
@@ -232,9 +238,9 @@ bot.startPolling(() => {
   console.log('Бот запущен');
 
   //оповестить при старте
-  //notifyUsers(1);
+  notifyUsers(1);
 
   //задача оповещения
   //setInterval(notifyUsers.bind(null, 1), 60*60*1000);
-  //setInterval(notifyUsers.bind(null, 10), 5000);
+  setInterval(notifyUsers.bind(null, 10), 5000);
 })
