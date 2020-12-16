@@ -241,6 +241,6 @@ bot.startPolling(() => {
   notifyUsers(1);
 
   //задача оповещения
-  //setInterval(notifyUsers.bind(null, 1), 60*60*1000);
-  setInterval(notifyUsers.bind(null, 10), 5000);
+  setInterval(notifyUsers.bind(null, 1), 60*60*1000);
+  //setInterval(notifyUsers.bind(null, 10), 5000);
 })
