@@ -5,7 +5,7 @@ const Scene = require('node-vk-bot-api/lib/Scene')
 const Stage = require('node-vk-bot-api/lib/Stage')
 const Session = require('node-vk-bot-api/lib/session')
 const Datastore = require('nedb-promise')
-const TOKEN = require('./bot').TOKEN
+const TOKEN = require('./token').TOKEN
 
 const db = {};
 db.customers = Datastore({ filename: 'db/customers.db' });
